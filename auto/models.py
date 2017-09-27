@@ -15,7 +15,7 @@ class TestUsers(models.Model):
 
 class Modules(models.Model):
     modulesname=models.CharField(max_length=50,verbose_name=u'模块名称')
-    promodules=models.ForeignKey('self')
+    promodules=models.ForeignKey('self',verbose_name=u'前置模块')
     creatdata=models.DateField(auto_now_add=True,verbose_name=u'创建时间')
     lastmodif=models.DateField(auto_now=True,verbose_name=u'最后修改时间')
     author=models.ForeignKey(TestUsers)
@@ -31,4 +31,4 @@ class Cases(models.Model):
     remark=models.CharField(max_length=50,verbose_name=u'备注')
     def __unicode__(self):
         return self.casename
-    
+

@@ -1,3 +1,4 @@
+# coding=utf-8
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,13 +14,21 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from django.contrib import admin
+from django.conf.urls import url,include
+#from django.contrib import admin
 from auto import views
+#import xadmin                 # 添加该行
+#xadmin.autodiscover()     # 添加该行
+# Uncomment the next two lines to enable the admin:
+from django.contrib import admin
+admin.autodiscover()
+#from xadmin.plugins import xversion
+#xversion.register_models()
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^test/', views.test),
+    #url(r'^xadmin/', include(xadmin.site.urls)),
 ]
