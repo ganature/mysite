@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 #from django.contrib import admin
-from auto import views
+from auto import  views
 #import xadmin                 # 添加该行
 #xadmin.autodiscover()     # 添加该行
 # Uncomment the next two lines to enable the admin:

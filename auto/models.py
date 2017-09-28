@@ -31,4 +31,3 @@ class Cases(models.Model):
     remark=models.CharField(max_length=50,verbose_name=u'备注')
     def __unicode__(self):
         return self.casename
-
