@@ -2,6 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -12,6 +13,37 @@
       <li>{{module.modulesname}}</li>
     {% endfor %}
   {% endblock %}
+  </div>
+
+  <div>
+    <table>
+      <th>测试模块</th>
+      <th>前置模块</th>
+      <th>创建日期</th>
+      <th>最后修改日期</th>
+      <th>创建者</th>
+      <th>备注</th>
+      {% for module in modules%}
+      <tr>
+        <td>
+          {{module.modulesname}}
+        </td>
+        
+        <td>
+          {{module.creatdata}}
+        </td>
+        <td>
+          {{module.lastmodif}}
+        </td>
+        <td>
+          {{module.author}}
+        </td>
+        <td>
+          {{module.remark}}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
   </div>
   </body>
 </html>
