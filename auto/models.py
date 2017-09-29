@@ -31,7 +31,8 @@ class Cases(models.Model):
     remark=models.CharField(max_length=50,verbose_name=u'备注')
     def __unicode__(self):
         return self.casename
-class Parameters(models.Modules):
+class Parameters(models.Model):
     cname=models.ForeignKey(Cases,on_delete=models.CASCADE,verbose_name=u'测试用例')
     Param1=models.CharField(max_length=50,verbose_name=u'参数1')
     Param2=models.CharField(max_length=50,verbose_name=u'参数2')
+

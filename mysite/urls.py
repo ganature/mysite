@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^test/', views.test),
+    url(r'^testcase/',views.case),
     #url(r'^xadmin/', include(xadmin.site.urls)),
 ]
