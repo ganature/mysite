@@ -10,4 +10,8 @@ def index(request):
 
 def test(request):
     modules=Modules.objects.all()
-    return render(request,'test.html',{'modules':modules})
+    return render(request,'modules.html',{'modules':modules})
+
+def case(request):	
+	cases=Cases.objects.all().select_related('mname')
+	return render(request,'testcase.html',{'cases':cases})

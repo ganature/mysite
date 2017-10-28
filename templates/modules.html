@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+  {% block content %}
+  <div>
+    {% for module in modules%}
+    <li><a href="#">{{module.modulesname}}</a></li>
+    {% endfor %}
+  {% endblock %}
+
+

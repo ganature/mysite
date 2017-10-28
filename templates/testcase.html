@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+    <table >
+    	<th>{{cases.mname.verbose_name}}</th>
+    	<th>{{cases.casename.verbose_name}}</th>
+    	<th>{{cases.creatdata.verbose_name}}</th>
+    	<th>{{cases.lastmodif.verbose_name}}</th>
+    	<th>{{cases.remark.verbose_name}}</th>
+    	{% for case in cases %}
+    	<tr>
+    		<td>{{case.mname.modulesname}}</td>
+    		<td>{{case.casename}}</td>
+    		<td>{{case.creatdata}}</td>
+    		<td>{{case.lastmodif}}</td>
+    		<td>{{case.remark}}</td>
+    	</tr>
+    	{% endfor %}
+    </table>
+    	
+    
+{% endblock  %}
