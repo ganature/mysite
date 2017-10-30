@@ -29,7 +29,8 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
-    url(r'^test/', views.test),
+    url(r'^module/', views.module),
     url(r'^testcase/',views.case),
+    url(r'^parm/',views.parameter)
     #url(r'^xadmin/', include(xadmin.site.urls)),
 ]
