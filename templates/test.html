@@ -2,13 +2,13 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
   <body>
 
   {% block content %}
-  <div>
+  <div class="">
     {% for module in modules%}
       <li>{{module.modulesname}}</li>
     {% endfor %}

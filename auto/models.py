@@ -8,6 +8,7 @@ from django.db import models
 class TestUsers(models.Model):
     username=models.CharField(max_length=20,verbose_name=u'用户名')
     password=models.CharField(max_length=20,verbose_name=u'密码')
+    email=models.EmailField()
     creatdata=models.DateField(auto_now_add=True,verbose_name=u'创建时间')
     lastmodif=models.DateField(auto_now=True,verbose_name=u'最后修改时间')
     def __unicode__(self):

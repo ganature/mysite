@@ -21,6 +21,8 @@ from auto import  views
 #xadmin.autodiscover()     # 添加该行
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+
+
 admin.autodiscover()
 #from xadmin.plugins import xversion
 #xversion.register_models()
@@ -28,6 +30,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
     url(r'^$', views.index),
     url(r'^module/', views.module),
     url(r'^testcase/',views.case),
